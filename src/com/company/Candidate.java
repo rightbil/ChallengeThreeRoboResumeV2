@@ -128,12 +128,13 @@ public class Candidate {
         //System.out.println("Personal info saved. Add experiences");
         addExperience();
     }
+
     public void addExperience() //experience
     {
 
         // candidate
         Scanner sc = new Scanner(System.in);
-       // sc.nextLine();
+        // sc.nextLine();
         ArrayList<String> localAchivments = new ArrayList<>();
         // Expericance
         String company;
@@ -159,7 +160,7 @@ public class Candidate {
             // 6.2 Jobtitle
             System.out.println("Enter Job Title");
             jobTitle = sc.nextLine();
-           // 6.3 startDate
+            // 6.3 startDate
             System.out.println("Enter startDate");
             startDate = sc.nextLine();
             //6.4 endDate
@@ -188,7 +189,7 @@ public class Candidate {
                     addMoreSkill = false;
                 }
             }
-             // add more experiance
+            // add more experiance
 
             e = new Experience(company, jobTitle, startDate, endDate, jobDescription, skills);
             System.out.println("display expricance" + e.getStartDate());
@@ -217,5 +218,27 @@ public class Candidate {
                 ", graduatingYear='" + graduatingYear + '\'' +
                 ", candidateExperiances=" + listOfExperiences +
                 '}';
+    }
+
+
+    public void displayInformation() {
+        System.out.println("===================================");
+        System.out.println(this.getFirstName() + this.getLastName());
+        System.out.println(this.getEmailAddress());
+        System.out.println("Education");
+        for (String s : this.getAchivement()) {
+            System.out.println(s);
+        }
+        System.out.println("Experiance");
+        System.out.println("Company  Start Date End Date");
+        for (Experience e : getListOfExperiences()) {
+            System.out.println(e.getCompany() + " " + e.getStartDate() + " " + e.getEndDate());
+        }
+        System.out.println("Skills ");
+        for (Experience e : getListOfExperiences()) {
+            for (String s : e.getSkills()) {
+                System.out.println(s);
+            }
+        }
     }
 }
