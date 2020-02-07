@@ -8,6 +8,8 @@ public class Experience { //experience
     private String jobTitle;
     private String startDate;
     private String endDate;
+    private String description;
+
     private ArrayList<String> jobDescription;
     private ArrayList<String> skills;
 public Experience() {}
@@ -68,16 +70,4 @@ public Experience() {}
         this.skills = skills;
     }
 
-    @Override
-    public String toString() {
-        return "Experiance{" +
-                "company='" + company + '\'' +
-                ", jobTitle='" + jobTitle + '\'' +
-                ", startDate='" + startDate + '\'' +
-                ", endDate='" + endDate + '\'' +
-                ", jobDescription=" + jobDescription +
-                ", skills=" + skills +
-                '}';
-    }
-
-}
+  }

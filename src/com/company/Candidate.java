@@ -4,34 +4,33 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Candidate {
-    private String firstName;
-    private String lastName;
+    private String fullName;
+    private String phoneNumber;
     private String emailAddress;
-    private ArrayList<String> achivement;
-    private String major;
-    private String universityName;
-    private String graduatingYear;
-    private ArrayList<Experience> listOfExperiences; //experience
+    private ArrayList<Achivement> listOfAchivement;
+    private ArrayList<Experience> listOfExperiences;
+    private ArrayList<Skill> listOfSkills;
 
+    public Candidate(){
 
-    public Candidate() {
-
+        listOfAchivement= new ArrayList<>();
+        listOfExperiences = new ArrayList<>();
+        listOfSkills = new ArrayList<>();
+    }
+    public String getFullName() {
+        return fullName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmailAddress() {
@@ -42,36 +41,12 @@ public class Candidate {
         this.emailAddress = emailAddress;
     }
 
-    public ArrayList<String> getAchivement() {
-        return achivement;
+    public ArrayList<Achivement> getListOfAchivement() {
+        return listOfAchivement;
     }
 
-    public void setAchivement(ArrayList<String> achivement) {
-        this.achivement = achivement;
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
-        this.major = major;
-    }
-
-    public String getUniversityName() {
-        return universityName;
-    }
-
-    public void setUniversityName(String universityName) {
-        this.universityName = universityName;
-    }
-
-    public String getGraduatingYear() {
-        return graduatingYear;
-    }
-
-    public void setGraduatingYear(String graduatingYear) {
-        this.graduatingYear = graduatingYear;
+    public void setListOfAchivement(ArrayList<Achivement> listOfAchivement) {
+        this.listOfAchivement = listOfAchivement;
     }
 
     public ArrayList<Experience> getListOfExperiences() {
@@ -82,56 +57,156 @@ public class Candidate {
         this.listOfExperiences = listOfExperiences;
     }
 
+    public ArrayList<Skill> getListOfSkills() {
+        return listOfSkills;
+    }
+
+    public void setListOfSkills(ArrayList<Skill> listOfSkills) {
+        this.listOfSkills = listOfSkills;
+    }
+
     public void addCandidate() {
+    Scanner sc = new Scanner(System.in);
+        String fullName;
+        String phoneNumber;
+        String emailAddress;
+        ArrayList<Achivement> listOfAchivement;
+        ArrayList<Experience> listOfExperiences;
+        ArrayList<Skill> listOfSkills;
+
         // candidate
-        Scanner sc = new Scanner(System.in);
-        ArrayList<String> localAchivments = new ArrayList<>();
+        // (1) fullName
+        System.out.println("Candidate Biography information");
+        System.out.println("Enter full name");
+        setFullName(sc.nextLine());
+        // (2) phone numbber
+        System.out.println("Enter phone number");
+        setPhoneNumber(sc.nextLine());
+        // (2) emailAddress
+        System.out.println("Enter email Address");
+        setEmailAddress(sc.nextLine());
+
+        // Achivement
+        ArrayList<Achivement> localAchivments = new ArrayList<>();
+        String universityName;
+        String graduatingYear;
+        String degree;
+        String major;
+        Achivement a;
+        boolean addMoreAchivement = true;
+        while (addMoreAchivement) {
+                System.out.println("Enter University Name ");
+                universityName=sc.nextLine();
+            System.out.println("Enter Graduating Year");
+            graduatingYear=sc.nextLine();
+
+            System.out.println("Enter Degree");
+            degree= sc.next();
+
+            System.out.println("Enter Major");
+            major= sc.nextLine();
+
+            a= new Achivement(universityName,graduatingYear,degree,major);
+            localAchivments.add(a);
+            System.out.println("Continue adding achivement Y/N");
+                if (!sc.nextLine().equalsIgnoreCase("Y")) {
+                    break;
+                }
+            }
+            setListOfAchivement(localAchivments);
+
         // Expericance
         String company;
         String jobTitle;
         String startDate;
         String endDate;
-        ArrayList<String> jobDescription;
-        ArrayList<String> skills;
+        String description;
         Experience e;
-        String wantToContinue = "Y";
-        ArrayList<Experience> userExperienceList = new ArrayList<>();
-        // (1) firstName
-        System.out.println("Candidate Biography information");
-        System.out.println("Enter first name");
-        setFirstName(sc.nextLine());
-        // (2) lastName
-        System.out.println("Enter last name");
-        setLastName(sc.nextLine());
-        // (2) emailAddress
-        System.out.println("Enter email Address");
-        setEmailAddress(sc.nextLine());
-        while (true) {
-            System.out.println("Enter achivements {Associate,Bachlor...PhD");
-            localAchivments.add(sc.nextLine());
 
+        ArrayList<Experience> userExperienceList = new ArrayList<>();
+        String wantToContinue = "Y";
+        // (6) Experiance infomation
+        boolean addMoreExperiance = true;
+        while (addMoreExperiance) {
+            //for every expreriance
+            // 6.1 company
+            System.out.println("Enter company");
+            company = sc.nextLine();
+            // 6.2 Jobtitle
+            System.out.println("Enter Job Title");
+            jobTitle = sc.nextLine();
+            // 6.3 startDate
+            System.out.println("Enter startDate");
+            startDate = sc.nextLine();
+            //6.4 endDate
+            System.out.println("Enter end Date");
+            endDate = sc.nextLine();
+ //              public Experience(String company, String jobTitle, String startDate, String endDate, ArrayList<String> jobDescription, ArrayList<String> skills) {
+
+                e= new Experience(company,startDate,endDate,u);
+            userExperienceList.add(e);
             System.out.println("Continue adding achivement Y/N");
-            if (!sc.nextLine().equalsIgnoreCase("Y")) break;
+            if (!sc.nextLine().equalsIgnoreCase("Y")) {
+                break;
+            }
+
         }
-        setAchivement(localAchivments);
-        // (3) major
-        System.out.println("Enter major");
-        setMajor(sc.nextLine());
-        // (4) university Name
-        System.out.println("Enter University name");
-        setUniversityName(sc.nextLine());
-        // (5) graduating year
-        System.out.println("Enter graduating year");
-        setGraduatingYear(sc.nextLine());
-        System.out.println("Press enter to continue");
-        //sc.nextLine();
-        //System.out.println("Personal info saved. Add experiences");
-        addExperience();
+
+            boolean addMoreJobDescription = true;
+            while (addMoreJobDescription) {
+                System.out.println("Enter Job description");
+                userExperienceList.add(sc.nextLine());
+                System.out.println("Continue adding description ? Y/N");
+                if (!sc.nextLine().equalsIgnoreCase("Y")) {
+                    addMoreJobDescription = false;
+                }
+
+            }
+
+            //6.6 Add while loop for multiple entry
+            boolean addMoreSkill = true;
+            while (addMoreSkill) {
+                System.out.println("Enter skill");
+                skills.add(sc.nextLine());
+
+                System.out.println("Continue adding skills ? Y/N");
+                if (!sc.nextLine().equalsIgnoreCase("Y")) {
+                    addMoreSkill = false;
+                }
+            }
+            // add more experiance
+
+            e = new Experience(company, jobTitle, startDate, endDate, jobDescription, skills);
+            System.out.println("display expricance" + e.getStartDate());
+            userExperienceList.add(e);
+
+            System.out.println("Continue another job experiance? Y/N");
+            if (!sc.nextLine().equalsIgnoreCase("Y")) {
+                addMoreExperiance = false;
+            }
+
+        }// for each expericance outer while loop ends here
+        // 7 adding the Experiancce / s to the Candidate
+        setListOfExperiences(userExperienceList);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public void addExperience() //experience
     {
-
         // candidate
         Scanner sc = new Scanner(System.in);
         // sc.nextLine();
@@ -147,8 +222,7 @@ public class Candidate {
         String wantToContinue = "Y";
         ArrayList<Experience> userExperienceList = new ArrayList<>();
         // (6) Experiance infomation
-        //System.out.println("Enter Work Experiance:");// for " + this.getFirstName() + " " + this.getLastName());
-        boolean addMoreExperiance = true;
+         boolean addMoreExperiance = true;
         while (addMoreExperiance) {
             //for every expreriance
             jobDescription = new ArrayList<>();
@@ -206,19 +280,6 @@ public class Candidate {
 
     }// end of add candidate
 
-    @Override
-    public String toString() {
-        return "Candidate{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", achivement=" + achivement +
-                ", major='" + major + '\'' +
-                ", universityName='" + universityName + '\'' +
-                ", graduatingYear='" + graduatingYear + '\'' +
-                ", candidateExperiances=" + listOfExperiences +
-                '}';
-    }
 
 
     public void displayInformation() {
