@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="689120e6-5c19-4475-989d-9922b242ef11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Achivement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/DriverApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RoboResumeV1/com/company/Candidate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RoboResumeV1/com/company/Experience.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RoboResumeV1/com/company/Experience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RoboResumeV1/com/company/ResumeApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Achivement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CandidateDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ResumeDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Experience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ResumeApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Skill.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ChallengeThreeRoboResumeV2" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,6 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1XTxTzwoNiVsuBPF6zCU6SeerOR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -30,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -50,7 +69,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ResumeApp" />
+      <option name="MAIN_CLASS_NAME" value="com.company.DriverApp" />
       <module name="RoboResumeV1" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -81,6 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581083898499</updated>
       <workItem from="1581083902270" duration="25278000" />
+      <workItem from="1581169763583" duration="20832000" />
     </task>
     <servers />
   </component>
@@ -88,29 +108,39 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="106" key="#com.intellij.ide.util.MemberChooser" timestamp="1581109801350">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="263" y="52" key="#com.intellij.ide.util.MemberChooser" timestamp="1581194232176">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="263" y="52" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581194232176" />
     <state x="395" y="106" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581109801350" />
-    <state x="518" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581105087643">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="448" y="251" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581170082050">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="448" y="251" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1581170082050" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581197550380">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1581197550380" />
     <state x="518" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581105087643" />
-    <state width="884" height="912" key="GridCell.Tab.0.bottom" timestamp="1581107492648">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1581200271537">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581200271537" />
     <state width="884" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581107492648" />
-    <state width="884" height="912" key="GridCell.Tab.0.center" timestamp="1581107492648">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1581200271537">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581200271537" />
     <state width="884" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581107492648" />
-    <state width="884" height="912" key="GridCell.Tab.0.left" timestamp="1581107492648">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1581200271537">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581200271537" />
     <state width="884" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581107492648" />
-    <state width="884" height="912" key="GridCell.Tab.0.right" timestamp="1581107492648">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1581200271537">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581200271537" />
     <state width="884" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581107492648" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581102116995">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -128,9 +158,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581102116995" />
-    <state x="463" y="166" key="SettingsEditor" timestamp="1581092594315">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="301" y="0" key="SettingsEditor" timestamp="1581199631755">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="301" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581199631755" />
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581092594315" />
     <state x="667" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1581083902691">
       <screen x="0" y="0" width="1920" height="1040" />

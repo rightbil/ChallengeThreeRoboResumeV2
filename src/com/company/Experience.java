@@ -1,25 +1,19 @@
 package com.company;
-
 import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Experience { //experience
     private String company;
     private String jobTitle;
     private String startDate;
     private String endDate;
-    private String description;
-
-    private ArrayList<String> jobDescription;
-    private ArrayList<String> skills;
+    private ArrayList<String> duties;
 public Experience() {}
-    public Experience(String company, String jobTitle, String startDate, String endDate, ArrayList<String> jobDescription, ArrayList<String> skills) {
+
+    public Experience(String company, String jobTitle, String startDate, String endDate, ArrayList<String> duties) {
         this.company = company;
         this.jobTitle = jobTitle;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.jobDescription = jobDescription;
-        this.skills = skills;
+        this.duties = duties;
     }
 
     public String getCompany() {
@@ -54,20 +48,13 @@ public Experience() {}
         this.endDate = endDate;
     }
 
-    public ArrayList<String> getJobDescription() {
-        return jobDescription;
+    public ArrayList<String> getDuties() {
+        return duties;
     }
 
-    public void setJobDescription(ArrayList<String> jobDescription) {
-        this.jobDescription = jobDescription;
+    public void setDuties(ArrayList<String> duties) {
+        this.duties = duties;
     }
 
-    public ArrayList<String> getSkills() {
-        return skills;
-    }
-
-    public void setSkills(ArrayList<String> skills) {
-        this.skills = skills;
-    }
 
   }
